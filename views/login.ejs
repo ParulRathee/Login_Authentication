@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+<form action="/login"  method="post" class="form-signin">
+    <h3 class="form-signin-heading">Welcome!! Login</h3>
+    <% if (messages.error) { %>
+        <%= messages.error %>
+      <% } %>
+    <div>
+        
+        <input type="email" id="email" placeholder="Email Address" name="email" class="form-control"
+        required>
+    </div>
+    <div>
+        
+        <input type="password" id="password" placeholder="Password" name="password" class="form-control"
+        required>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="Submit">Login</button>
+</form>
+<a href="/register">Register</a>
+</div>
+</div>
+</body>
+</html>
